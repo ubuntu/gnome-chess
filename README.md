@@ -1,19 +1,5 @@
-# How to use this template repository
-
-This is a template repository, meant to be copied to start a skeleton of other projects. This template provides a few things:
-- build workflow so that a snap is built automatically when a Pull Request (PR) is opened
-- PR template
-- README.md skeleton
-
-A bit about the README.md below:
-- Delete everything in this "How to use this template repository" (everything above the ==== line). 
-- Replace gnome-chess with the name of the snap (ex. gnome-chess).
-- Update any section starting with "TODO" to add the info requested, and remove the TODO line.
-
-========================================================================================
 # gnome-chess
 
-TODO: Add links to badges. Here's the gnome-chess badge links for example:
 *[![gnome-chess](https://snapcraft.io/gnome-chess/badge.svg)](https://snapcraft.io/gnome-chess)
 [![gnome-chess](https://snapcraft.io/gnome-chess/trending.svg?name=0)](https://snapcraft.io/gnome-chess)*
 
@@ -65,6 +51,4 @@ git branch -u myfork/my-bugfix-branch
 3. When you feel they're ready for submitting to the main repository (stable branch), [open up a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) from your `my-bugfix-branch` to the `ubuntu/stable` branch.
 4. Once you've opened the PR, it will automatically trigger the build-test action that will launch a build of the snap. You can watch the progress of the snap build from your PR (Show all checks -> Details). Once the snap build has completed, you can find the built snap (to test with) under "Artifacts".
 4. Someone from the team will review the open PR and either merge it or start a discussion with you with additional changes or clarification needed.
-5. Once the PR has been merged into the stable branch, then on the next git mirror sync (every 4 hours), launchpad will trigger [a build of the snap that gets published](https://launchpad.net/~desktop-snappers/+snaps) to the [snap store](https://snapcraft.io) into the *candidate* channel. After sufficient testing of the snap from the candidate channel, then the reviewer (a Collaborator of the snap in the store) will promote the snap to the stable branch in the snap store.
-
-TODO: update the two links in step 5. above to point to actual builds and the correct snap page in the store.
+5. Once the PR has been merged into the stable branch, then on the next git mirror sync (every 4 hours), launchpad will trigger [a build of the snap that gets published](https://launchpad.net/~desktop-snappers/gnome-chess/+snap/gnome-chess-stable) to the [snap store](https://snapcraft.io/gnome-chess) into the *candidate* channel. After sufficient testing of the snap from the candidate channel, then the reviewer (a Collaborator of the snap in the store) will promote the snap to the stable branch in the snap store.
