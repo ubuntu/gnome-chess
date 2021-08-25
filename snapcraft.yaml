@@ -40,7 +40,7 @@ parts:
     source-type: git
     source-branch: gnome-3-38
     override-build: |
-      sed -i.bak -e 's|Icon=org.gnome.Chesschess$|Icon=${SNAP}/meta/gui/org.gnome.Chess.svg|g' $SNAPCRAFT_PART_SRC/data/org.gnome.Chess.desktop.in
+      sed -i.bak -e 's|Icon=org.gnome.Chess$|Icon=${SNAP}/meta/gui/org.gnome.Chess.svg|g' $SNAPCRAFT_PART_SRC/data/org.gnome.Chess.desktop.in
       snapcraftctl build
       mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
       cp $SNAPCRAFT_PART_SRC/data/icons/hicolor/scalable/apps/org.gnome.Chess.svg $SNAPCRAFT_PART_INSTALL/meta/gui/
