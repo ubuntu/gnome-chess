@@ -38,7 +38,7 @@ parts:
   gnome-chess:
     source: https://gitlab.gnome.org/GNOME/gnome-chess.git
     source-type: git
-    source-branch: gnome-3-38
+    source-branch: gnome-40
     override-build: |
       sed -i.bak -e 's|Icon=org.gnome.Chess$|Icon=${SNAP}/meta/gui/org.gnome.Chess.svg|g' $SNAPCRAFT_PART_SRC/data/org.gnome.Chess.desktop.in
       snapcraftctl build
@@ -51,6 +51,12 @@ parts:
     override-pull: |
       snapcraftctl pull
       snapcraftctl set-version $(git describe --tags --abbrev=10)
+    #uild-environment:
+    # - XDG_DATA_DIRS: $SNAPCRAFT_STAGE/usr/share:/usr/share:$XDG_DATA_DIRS
+    # - LD_LIBRARY_PATH: $SNAPCRAFT_STAGE/usr/lib/vala-0.48:$SNAPCRAFT_STAGE/usr/lib:$SNAPCRAFT_STAGE/usr/lib/$SNAPCRAFT_ARCH_TRIPLET:$LD_LIBRARY_PATH
+    # - PKG_CONFIG_PATH: $SNAPCRAFT_STAGE/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pkgconfig:$SNAPCRAFT_STAGE/usr/lib/pkgconfig:$SNAPCRAFT_STAGE/usr/share/pkgconfig:$PKG_CONFIG_PATH
+    #uild-packages:
+    # - cmake
         
   gnuchess:
     plugin: nil
