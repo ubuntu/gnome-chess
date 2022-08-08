@@ -55,10 +55,9 @@ parts:
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=10)
+
   gnuchess:
     plugin: nil
-    build-packages:
-      - libc6-dev
     stage-packages:
       - gnuchess
 
