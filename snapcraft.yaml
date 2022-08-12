@@ -41,7 +41,7 @@ parts:
   gnome-chess:
     source: https://gitlab.gnome.org/GNOME/gnome-chess.git
     source-type: git
-    source-tag: '42.0'
+    source-tag: '42.1'
     parse-info: [usr/share/metainfo/org.gnome.Chess.appdata.xml]
     override-build: |
       sed -i.bak -e 's|Icon=org.gnome.Chess$|Icon=${SNAP}/meta/gui/org.gnome.Chess.svg|g' $CRAFT_PART_SRC/data/org.gnome.Chess.desktop.in
