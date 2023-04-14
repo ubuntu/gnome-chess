@@ -20,8 +20,8 @@ slots:
     name: org.gnome.Chess
 
 layout:
-  /etc/gnome-chess:
-    symlink: $SNAP/etc/gnome-chess
+  /usr/engines/gnome-chess:
+    symlink: $SNAP/usr/engines/gnome-chess
 
 apps:
   gnome-chess:
@@ -51,6 +51,7 @@ parts:
     plugin: meson
     meson-parameters:
       - --prefix=/usr
+      - --sysconfdir=/usr/engines
       - --buildtype=release
     override-pull: |
       craftctl default
