@@ -41,11 +41,11 @@ parts:
   gnome-chess:
     source: https://gitlab.gnome.org/GNOME/gnome-chess.git
     source-type: git
-    source-tag: '46.0'
+    source-tag: '48.0'
     source-depth: 1
 # ext:updatesnap
 #   version-format:
-#     lower-than: '47'
+#     lower-than: '49'
 #     no-9x-revisions: true
     parse-info: [usr/share/metainfo/org.gnome.Chess.appdata.xml]
     override-build: |
