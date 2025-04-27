@@ -28,11 +28,7 @@ apps:
     extensions: [gnome]
     command: usr/bin/gnome-chess
     plugs:
-      - gsettings
       - home # Needed for save game handling
-      - mount-observe
-      - network
-      - audio-playback
     desktop: usr/share/applications/org.gnome.Chess.desktop
     environment:
       PATH: $SNAP/usr/games:$PATH
