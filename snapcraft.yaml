@@ -37,7 +37,7 @@ parts:
   gnome-chess:
     source: https://gitlab.gnome.org/GNOME/gnome-chess.git
     source-type: git
-    source-tag: '48.0'
+    source-tag: '49.2'
     source-depth: 1
     parse-info: [usr/share/metainfo/org.gnome.Chess.appdata.xml]
     override-build: |
